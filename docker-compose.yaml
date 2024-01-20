@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  postgres_todo:
+    restart: always
+    image: postgres:15.3-alpine
+    container_name: database_todo
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_DB: todo
+    ports:
+      - "6432:5432"
+    volumes:
+      - postgres-data-todo:/var/lib/postgresql/data
+
+volumes:
+  postgres-data-todo:
