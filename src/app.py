@@ -2,7 +2,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 from databases import Database
-from src.core.settings import get_settings
+from databases import DatabaseURL
 from src.api import include_routers
 from src.core.settings import get_settings
 import src.controller.todo as todo_module
