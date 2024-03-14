@@ -11,6 +11,10 @@ config = get_settings()
 db = Database(config.db.dsn)
 
 
+def get_db() -> Database:
+    return db
+
+
 @asynccontextmanager
 async def lifespan(_app: FastAPI):
     await db.connect()
