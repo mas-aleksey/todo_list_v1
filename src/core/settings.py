@@ -1,6 +1,7 @@
 from pydantic_settings import BaseSettings
 
 
+
 class DBConfig(BaseSettings):
     host: str
     port: int
